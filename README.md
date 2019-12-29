@@ -1,7 +1,14 @@
 # iris_sub_specie_detection_ai
 This iOS app takes length and width of iris flower using AR tech and then uses a prediction via trained ml model in the backend and displays the sub specie of Iris
 
-
+## Please Note : Prior Knowledge of iOS App dev and Django for API creation is expected.
+ - Have a look at tutorials below :-
+   - iOS AR App
+     https://github.com/adithyabhat/Measure
+   - Django App
+     https://realpython.com/tutorials/django/
+     
+     
 This is a full tutorial on how I created this iOS app. It has the following phases:- <br>
 1. Train and Deploy a model on famous Iris Dataset ( I have used AWS windows server ) <br>
 2. Create API for that trained model ( used Django for this ) <br>
@@ -101,10 +108,12 @@ joblib.dump(logr, 'iris.pkl')
  
  ################################################
  
- ### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR as you can see in the video below. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
+ ### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
  
- <video>
- <source src ="IMG_0462.mp4" type ="video/mp4">
-</video>
- 
+ - STEPS TO USE THE iOS AR App
+   - Open the app
+   - Live Camera will open
+   - Point towards the flower
+   - As we use the measure App in iOS use this app to measure length of Petal and Sepal respectively
+   - Then The app will show up a pop Up displaying name of the Specie
 
