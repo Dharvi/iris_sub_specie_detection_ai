@@ -120,7 +120,7 @@ joblib.dump(logr, 'iris.pkl')
    - Then The app will show up a pop Up displaying name of the Specie
    
    
-   ![Uploading actual_iris_flower.gif…]()
+  ![Uploading actual_iris_flower.gif…]()
 
 
 
