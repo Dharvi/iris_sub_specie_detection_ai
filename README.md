@@ -20,7 +20,8 @@ I have done whole analysis of Iris dataset on Kaggle use the link below to find 
 https://www.kaggle.com/dharvi/kernel17af289f57
 
 ####################################################
-After this we create the model using below code :-
+
+### After this we create the model using below code :-
   - I have used logistic regression :
   - I created the below code and ran it over the AWS windows server so that it "PICKLED" there <br>
   
@@ -98,7 +99,7 @@ joblib.dump(logr, 'iris.pkl')
   https://cocoapods.org/pods/SwiftyJSON
  
  
- ###################################################################################################
+ ################################################
  
  ### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR as you can see in the video below. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
  
