@@ -110,6 +110,8 @@ joblib.dump(logr, 'iris.pkl')
  
  ### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
  
+ ### I have provided the SWIFT 4 Code doc along with this tutorial so that one can have a look on how I designed this app. 
+ 
  - STEPS TO USE THE iOS AR App
    - Open the app
    - Live Camera will open
@@ -117,3 +119,10 @@ joblib.dump(logr, 'iris.pkl')
    - As we use the measure App in iOS use this app to measure length of Petal and Sepal respectively
    - Then The app will show up a pop Up displaying name of the Specie
 
+### Developer :- 
+     - DHARVI 
+     - iOS Developer
+     - Python 3
+     - Data Scraping
+     - AI
+     - :)
