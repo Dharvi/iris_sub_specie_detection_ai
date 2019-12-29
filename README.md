@@ -118,6 +118,11 @@ joblib.dump(logr, 'iris.pkl')
    - Point towards the flower
    - As we use the measure App in iOS use this app to measure length of Petal and Sepal respectively
    - Then The app will show up a pop Up displaying name of the Specie
+   
+   
+   ![Uploading actual_iris_flower.gif…]()
+
+
 
 ### Developer :- 
      - DHARVI 
