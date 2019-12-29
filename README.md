@@ -104,6 +104,6 @@ joblib.dump(logr, 'iris.pkl')
  ### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR as you can see in the video below. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
  
  
- 
+
  
 
