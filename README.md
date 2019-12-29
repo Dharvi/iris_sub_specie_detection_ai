@@ -2,27 +2,27 @@
 This iOS app takes length and width of iris flower using AR tech and then uses a prediction via trained ml model in the backend and displays the sub specie of Iris
 
 
-This is a full tutorial on how I created this iOS app. It has the following phases:-
-1. Train and Deploy a model on famous Iris Dataset ( I have used AWS windows server )
-2. Create API for that trained model ( used Django for this )
-3. create the iOS app. ( I will not discuss the basics of iOS app dev. here but discuss the important codes in detail )
+This is a full tutorial on how I created this iOS app. It has the following phases:- <br>
+1. Train and Deploy a model on famous Iris Dataset ( I have used AWS windows server ) <br>
+2. Create API for that trained model ( used Django for this ) <br>
+3. create the iOS app. ( I will not discuss the basics of iOS app dev. here but discuss the important codes in detail ) <br>
 
-<u>Starting from phase 1.</u>
+<u>Starting from phase 1.</u> <br>
  
-#Train the AI model on Iris Dataset
+### Train the AI model on Iris Dataset
 
-you can download the Iris Dataset from the link below :-
+you can download the Iris Dataset from the link below :- <br>
 
 https://www.kaggle.com/chuckyin/iris-datasets
 
-I have done whole analysis of Iris dataset on Kaggle use the link below to find out :-
+I have done whole analysis of Iris dataset on Kaggle use the link below to find out :- <br>
 
 https://www.kaggle.com/dharvi/kernel17af289f57
 
-##############################################################################################################################
+####################################################
 After this we create the model using below code :-
   - I have used logistic regression :
-  - I created the below code and ran it over the AWS windows server so that it "PICKLED" there
+  - I created the below code and ran it over the AWS windows server so that it "PICKLED" there <br>
   
 import pandas as pd
 import numpy as np
@@ -36,12 +36,12 @@ logr = LogisticRegression()
 #fit the model on training data
 logr.fit(X,Y)
 
-##### This line of code below is used to pickle the model.
-##### This will create a doc with .pkl extension which we can call anywhere as you will see below when I will create the API
+### This line of code below is used to pickle the model.
+### This will create a doc with .pkl extension which we can call anywhere as you will see below when I will create the API
 joblib.dump(logr, 'iris.pkl')
 
-##### now stuff with creating a model is done
-#############################################################################################################################
+### now stuff with creating a model is done
+#####################################################
 
 <u> Phase 2. </u>
 
@@ -62,12 +62,12 @@ joblib.dump(logr, 'iris.pkl')
       prediction = lr.predict(iris_df) # This line provides the required values into the trained model  <br>
       return HttpResponse(json.dumps({'prediction':prediction.tolist()}))  <br>
     
-  ##### PLEASE NOTE :- THE iris_detect.py, iris.pkl, Django app all should reside on the server
+  ### PLEASE NOTE :- THE iris_detect.py, iris.pkl, Django app all should reside on the server
   
-  ##### This finishes the step for API dev. now is the turn for using that API .
+  ### This finishes the step for API dev. now is the turn for using that API .
   
-  ##### You can use the API in a web APP / Android App / iOS App
-##################################################################################################
+  ### You can use the API in a web APP / Android App / iOS App
+######################################################
     
   <u> Phase 3. </u>
   
@@ -89,18 +89,18 @@ joblib.dump(logr, 'iris.pkl')
                 }
             })
             
-  ###### Alamofire is an iOS pod (dependency) you can read about it via link below:-
+  ### Alamofire is an iOS pod (dependency) you can read about it via link below:-
   
   https://cocoapods.org/pods/Alamofire
   
-  ###### I have also used SwiftyJSON which is also a pod used for converting data into JSON
+  ### I have also used SwiftyJSON which is also a pod used for converting data into JSON
   
   https://cocoapods.org/pods/SwiftyJSON
  
  
  ###################################################################################################
  
- ##### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR as you can see in the video below. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
+ ### That's it we are finished with the iOS AR App that takes in the input (length and width of Petal, length and width of Sepal) using AR as you can see in the video below. The red dots are rendered using AR that calculate length and width of petals and sepals respectively.
  
  
  
