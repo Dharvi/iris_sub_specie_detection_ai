@@ -32,21 +32,21 @@ https://www.kaggle.com/dharvi/kernel17af289f57
   - I have used logistic regression :
   - I created the below code and ran it over the AWS windows server so that it "PICKLED" there <br>
   
-import pandas as pd
-import numpy as np
-from sklearn.linear_model import LogisticRegression
-from sklearn.externals import joblib
-iris = pd.read_csv("Iris.csv")
-Y = iris['label']
-X = iris.drop(['label'],axis = 1)
-logr = LogisticRegression()
+import pandas as pd<br>
+import numpy as np<br>
+from sklearn.linear_model import LogisticRegression<br>
+from sklearn.externals import joblib<br>
+iris = pd.read_csv("Iris.csv")<br>
+Y = iris['label']<br>
+X = iris.drop(['label'],axis = 1)<br>
+logr = LogisticRegression()<br>
 
-#fit the model on training data
-logr.fit(X,Y)
+### fit the model on training data
+logr.fit(X,Y)<br>
 
 ### This line of code below is used to pickle the model.
 ### This will create a doc with .pkl extension which we can call anywhere as you will see below when I will create the API
-joblib.dump(logr, 'iris.pkl')
+joblib.dump(logr, 'iris.pkl')<br>
 
 ### now stuff with creating a model is done
 #####################################################
